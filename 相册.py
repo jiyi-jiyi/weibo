@@ -4,17 +4,6 @@ import os
 import time, random
 
 cookies = {
-    'SCF': 'Al8bIfcBanK02294JsMGRoQP-oQymZ0z70FBREp42tMS8Dj9x1GHxL9seM0bgWPs2gkjfm0TJ3hlARuAFT4TBUo.',
-    'SUB': '_2A25FqdIFDeRhGeFM7VcU8i3NyDuIHXVmx2vNrDV6PUJbktAYLWfwkW1NQNYm7W1QRIj4XZQm-Bndzg9vntkxaH5y',
-    'SUBP': '0033WrSXqPxfM725Ws9jqgMF55529P9D9WW0Xqy_dUA0V1hKwy_I_sqY5NHD95QNeoqfSKz0eKeNWs4DqcjDi--fi-88iKnpi--Xi-zRi-iWi--NiKy8iKn4i--Ni-2EiKy81hzpe0Bt',
-    'SSOLoginState': '1756209749',
-    'ALF': '1758801749',
-    '_T_WM': '24506474145',
-    'MLOGIN': '1',
-    'WEIBOCN_FROM': '1110106030',
-    'XSRF-TOKEN': '125a5c',
-    'mweibo_short_token': '6982c21306',
-    'M_WEIBOCN_PARAMS': 'oid%3D3925543424937094%26luicode%3D10000011%26lfid%3D231583%26fid%3D100103type%253D1%2526q%253D%25E5%259B%25B0%25E6%25AD%25BB%25E4%25B8%25AA%25E6%2588%2591%26uicode%3D10000011',
 }
 
 
@@ -46,7 +35,7 @@ pic_headers = {
 }
 
 
-name = '困死个我'
+name = ''
 path = './' + name
 if not os.path.exists(path):
     os.makedirs(path)
@@ -95,4 +84,5 @@ while True:
                             f.write(temp.content)
                     
                     time.sleep(random.uniform(0.2, 0.5))
+
     page+=1
