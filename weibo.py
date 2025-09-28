@@ -33,7 +33,7 @@ def remove_html_tag(text):
     return soup.get_text(separator="\n")
 
 data = {"time":[], "text":[], "url":[]}
-cookie_string = 'SCF=Al8bIfcBanK02294JsMGRoQP-oQymZ0z70FBREp42tMSCzpWRBdByu457zkDfvhCs3pSVEDw0wRUyzp2DciBO-0.; SUB=_2A25F1hl2DeRhGeFM7VcU8i3NyDuIHXVmqhS-rDV6PUJbktAYLWT3kW1NQNYm7ZixBC5I4vyYtOBfldR4IFEbrb-T; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WW0Xqy_dUA0V1hKwy_I_sqY5JpX5KMhUgL.FoMESo-feoepe0M2dJLoIE.LxK-LB--L1h2LxKBLBonLB.2LxKML12-L1h.LxKMLBKzL12-Reo20S5tt; SSOLoginState=1758619942; ALF=1761211942; MLOGIN=1; _T_WM=28901705560; WEIBOCN_FROM=1110006030; XSRF-TOKEN=e4c741; mweibo_short_token=d5b431316f; M_WEIBOCN_PARAMS=luicode%3D10000011%26lfid%3D2304132691175262_-_WEIBO_SECOND_PROFILE_WEIBO%26fid%3D1005052691175262%26uicode%3D10000011'
+cookie_string = ''
 cookies = {}
 for pair in cookie_string.split(';'):
     key, value = pair.split('=', 1)
@@ -68,7 +68,7 @@ pic_headers = {
 
 s = requests.Session()
 s.cookies.update(cookies)
-name = '折木一茶'
+name = ''
 path = './' + name
 if not os.path.exists(path):
     os.makedirs(path)
@@ -124,4 +124,5 @@ while True:
         break
     
 df = pandas.DataFrame(data)
+
 df.to_excel('zmyc.xlsx')
